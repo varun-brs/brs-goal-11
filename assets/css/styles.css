@@ -1,0 +1,124 @@
+:root {
+  --primary-color: #1a4b84;
+  --chathams_blue: #1a4b84;
+  --tamarillo: #991e14;
+  --yellow_sea: #fead06;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.drop-down {
+  width: 70%;
+  margin-left: 150px;
+  height: 35px;
+  padding-left: 7px;
+  outline: none;
+  border-radius: 3px;
+}
+
+h1 {
+  font-size: 65px;
+  font-weight: 400;
+}
+
+.container {
+  display: flex;
+  /*align-items: center;
+  justify-content: center;*/
+  /* min-height: 100vh; */
+  flex-direction: column;
+}
+
+.input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 15px 15px;
+}
+
+.input-search {
+  width: 100%;
+  max-width: 320px;
+  padding: 10px 15px;
+  background-color: lightgray;
+  outline: none;
+  border-radius: 20px 8px 20px 8px;
+  border: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  border: 2px solid black;
+  font-weight: 400;
+  /*transition: 0.2s ease-out;*/
+}
+
+.selections {
+  /* width: 600px; */
+  float: left;
+}
+.map {
+  height: 60vh;
+  width: 100%;
+}
+
+.marker {
+  display: block;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 0;
+}
+.btn-search,
+.btn-search:hover .btn-search:active .btn-search:focus-visible {
+  background-color: var(--primary-color) !important;
+}
+
+#eventList {
+  padding-inline-start: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  grid-gap: 20px;
+}
+
+.event {
+  list-style-type: none;
+  background-color: #eaeaea;
+  border-radius: 3px;
+  padding: 10px 20px;
+  display: grid;
+  grid-template-columns: 3fr 3fr;
+  grid-template-areas: "name image" "house image" "actor image" "ancestry image" "dateOfBirth image";
+  text-align: left;
+}
+
+.event > img {
+  max-height: 200px;
+  grid-area: image;
+}
+
+.event-desc {
+  margin-right: 6px;
+  padding: 20px;
+}
+
+.event-type-img {
+  margin-left: auto;
+}
+
+.w-48 {
+  width: 48% !important;
+}
+.w-90 {
+  width: 90% !important;
+}
+.mapboxgl-popup-content .mapboxgl-popup-close-button {
+  margin: 15px 15px 0px 0px;
+  padding: 0px 5px;
+  border: 1px solid gray;
+}
+.mapboxgl-popup-content {
+  width: fit-content;
+}
