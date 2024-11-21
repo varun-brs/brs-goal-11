@@ -121,6 +121,7 @@ event_name.addEventListener("change", function () {
 });
 
 function fetchEvents() {
+  event_name.value = "";
   $("#eventTitle").html(null);
   $("#eventSelect").show();
   $("#layerSelect").hide();
